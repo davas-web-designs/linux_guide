@@ -1,0 +1,65 @@
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.aivanet.com%2Fwp-content%2Fuploads%2F2014%2F02%2FProgramming.jpg&f=1);
+$background-opacity: 0.9;
+$portrait_img: url(https://lh3.googleusercontent.com/9nMuhOs-bY5tviySVgDogoeNWPOSMjoXdvq3PqzeOi-B2n-QIJhTeub4DVZDNuDViSpmFAPJOz8wR4Lbh48zcMVfLy05DwjCvvYBRJOpqe-frZbXyRQzotRq5hna_zkaD0NzNOqzMo7gi0Cn4HCUo69PpxbRjLO8WafKtTwPGnMmXCyQ7Pe4iwGin-z9tOBkRg3zijfnGk98ckhSEsirtv4_vRJs5COHh-kdXm8nTBQ8amQsISV4iTV-oDN1G4uZql-K0qzjzMhd6tgYH2pUlhTQy_fXPI37N2i6vJMjaVhYy4VFVYjI-cxjqF8Pu4I9R2bLHEwq9nu1er5Vn0sUWOwMqe_s2THE3qgNTy0D6pZkrfhWFAEAN1nXBnoCZWTHKIVBKmGsYyYIjifuQBBy6cYCkL7imZe5-GmPqtB-wJ9fFQpMzE39pdpuDRwWTWGP7o58nxwMv7YppPu8uB2WY5ULQL9_GWmoC9x5Z4kbW8WUNkD2T3ovK8iDippghkcQxJFtQQ9UXWc7Trhynx4VRJW-E4YiE2JSME5p5lh34TCWEkneC7SeqvZxpWtB-SYfi0PDUsOor4xsuQF-g1R1dcmvIjBI6kVeiBrZicYMsABWfF1hCFi7NtNpEHyW25expcvRsCjxNDjj6ld0KFtLulT-S0aVAd0=w673-h888-no);
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Admin page
+  body
+    h2 Menu Items
+    form(method='POST' action ='/menu/edit')
+      each item in menuItems
+        input(type='text', value=item.name, name=item.name)
+        br
+      input(type='text', value='ola', name='ola')
+      button(type='submit') Edit menu items
