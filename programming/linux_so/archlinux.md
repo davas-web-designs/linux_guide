@@ -20,6 +20,10 @@
     ```
     mncli device
     ```
+  * if the wifi seems to be off and wont turn on even by pressing its physical button:
+    ```
+    rfkill unblock all
+    ```
 
 * PACMAN:
   * install a package:
