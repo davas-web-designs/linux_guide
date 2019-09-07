@@ -25,7 +25,14 @@
     rfkill unblock all
     ```
 * Check kernel version:
-    ```hostnamectl```
+  ```
+  hostnamectl
+  ```
+* motherboard model (need dmidecode):
+  ```
+  sudo dmidecode -s baseboard-product-name
+  ```
+
 
 * PACMAN:
   * install a package:
