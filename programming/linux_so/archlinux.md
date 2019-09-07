@@ -24,6 +24,8 @@
     ```
     rfkill unblock all
     ```
+* Check kernel version:
+    ```hostnamectl```
 
 * PACMAN:
   * install a package:
