@@ -24,17 +24,7 @@
     ```
     rfkill unblock all
     ```
-* Check kernel version:
-  ```
-  hostnamectl
-  ```
-  ```
-  uname -mrs
-  ```
-* motherboard model (need dmidecode):
-  ```
-  sudo dmidecode -s baseboard-product-name
-  ```
+
 
 
 * PACMAN:
