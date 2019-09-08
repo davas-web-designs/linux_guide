@@ -28,6 +28,9 @@
   ```
   hostnamectl
   ```
+  ```
+  uname -mrs
+  ```
 * motherboard model (need dmidecode):
   ```
   sudo dmidecode -s baseboard-product-name
