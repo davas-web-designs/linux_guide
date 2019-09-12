@@ -83,6 +83,6 @@ void main(int argc, char **argv){
   close(fd_in); close(fd_out);
   exit(0);
 }
-    
+```    
   
-      LIN - MódulosVersión 1.2©J.C. Sáez, M. PrietoThis work is licensed under the Creative CommonsAttribution-Share Alike3.0 Spain License. To view a copy of this license, visithttp://creativecommons.org/licenses/by-sa/3.0/es/ or send a letter toCreative Commons, 171 Second Street, Suite 300, San Francisco,California, 94105,USA.
+LIN - MódulosVersión 1.2©J.C. Sáez, M. PrietoThis work is licensed under the Creative CommonsAttribution-Share Alike3.0 Spain License. To view a copy of this license, visithttp://creativecommons.org/licenses/by-sa/3.0/es/ or send a letter toCreative Commons, 171 Second Street, Suite 300, San Francisco,California, 94105,USA.
